@@ -1,0 +1,32 @@
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <a routerLink="/" class="navbar-brand">My Store</a>
+
+
+    <button routerLink="/cart" class="btn btn-outline-light my-2 my-sm-0" type="submit">Go to Cart</button>
+</nav> -->
+
+<nav class="navbar sticky-top navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">My Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                <a class="nav-link" routerLink="/">About</a>
+                <!-- <a class="nav-link" routerLink="/">Pricing</a> -->
+            </div>
+
+        </div>
+        <div class="rightDiv">
+            <button routerLink="/cart" class="btn btn-outline-light my-2 my-sm-0" type="submit">Go to Cart</button>
+            <p class="total" style="color: azure;">Total in cart: {{ length }}</p>
+        </div>
+        
+    </div>
+</nav>
+
+

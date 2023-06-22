@@ -1,0 +1,19 @@
+<h2>Products List</h2>
+
+<div class="container">
+    <div class="grid">
+        <div *ngFor="let product of products; index as i">
+            <div class="card" style="width: 18rem;">
+                <img [src]="product.img" class="card-img-top" alt="IMG">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
+                    <div class="btns">
+                        <a routerLink="/product/{{ i }}" class="btn btn-primary">See the Details</a>
+                        <button (click)="addToCart(product)" class="btn btn-dark">Add to Cart</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

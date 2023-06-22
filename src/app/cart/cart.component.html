@@ -1,0 +1,20 @@
+<h2>Your Cart</h2>
+<h4>Total price: {{ total }} $</h4>
+<h6>Total in Cart: {{ length }}</h6>
+<div class="container">
+    <div class="grid">
+        <div *ngFor="let item of cart; index as i">
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.img}}" class="card-img-top" alt="IMG">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.price }}$</p>
+                    <p><button class="btn btn-warning minplus" (click)="removeQuantity(i)"> - </button> <span class="quantity">{{ item.quantity }}</span> <button class="minplus btn btn-warning" (click)="addQuantity(item.id)"> + </button></p>
+                    <button class="btn btn-danger" (click)="removeFromCart(i)">delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
