@@ -67,7 +67,7 @@ export class CartService {
     return this.cart;
   }
 
-  calculateTotal() {
+  calculateSubTotal() {
     let total: number = 0;
     for (let val of this.cart) {
       total = total + val.price * val.quantity;
@@ -75,6 +75,45 @@ export class CartService {
     return total;
   }
 
+  calculateTax(): number {
+    let total: number = 0;
+    for (let val of this.cart) {
+      total = total + val.price * val.quantity;
+    }
+    let tax: number = total * 0.1;
+    return tax;
+  }
+
+  calculateTotal(): number {
+    let total: number = 0;
+    for (let val of this.cart) {
+      total = total + val.price * val.quantity;
+    }
+    let tax: number = total * 0.1;
+    return total + tax;
+  }
+
+  calculateTotalDiscount(): number {
+    let total: number = 0;
+    for (let val of this.cart) {
+      total = total + val.price * val.quantity;
+    }
+    
+    let tax: number = total * 0.1; 
+    total = total + tax; 
+
+    if (total >= 40) {
+      let discount: number = total * 0.15;
+      let discountedTotal: number = total - discount;
+      return discountedTotal;
+    } else {
+      return total;
+    }
+  }
+  
+  
+  
+  
   getCartLength(): number {
     return this.cart.length;
   }
@@ -90,5 +129,8 @@ export class CartService {
     }
     return totalQuantity;
   }
+
+
+
 
 }

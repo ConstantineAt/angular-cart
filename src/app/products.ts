@@ -1,61 +1,138 @@
 export const products = [
-
     {
         id: 1,
-        img: 'https://cdn.pixabay.com/photo/2017/04/03/15/52/mobile-phone-2198770_1280.png',
-        name: 'Phone XL',
-        price: 799,
-        description: 'A large phone with one of the best screens',
-        quantity: 1
+        img: 'assets/hamburger.png',
+        category: 'FastFood',
+        name: 'Hamburger',
+        price: 6.99,
+        description: 'Indulge in our delicious, juicy, and handcrafted gourmet hamburgers',
+        quantity: 1,
+        calories: 500,
+        weight: '200 grams',
+        size: 'Regular',
+        preparationTime: '10 minutes',
+        accessibility: true,
+        hot: true
     },
-
-    {   
+    {
         id: 2,
-        img: 'https://cdn.pixabay.com/photo/2016/11/29/12/30/phone-1869510_1280.jpg',
-        name: 'Phone Mini',
-        price: 699,
-        description: 'A great phone with one of the best cameras',
-        quantity: 1
-
+        img: 'assets/pizza.png',
+        category: 'Italian Kitchen',
+        name: 'Pizza',
+        price: 12.99,
+        description: 'Savor the perfect blend of flavors with our irresistible pizzas',
+        quantity: 1,
+        calories: 800,
+        weight: '350 grams',
+        size: 'Medium',
+        preparationTime: '20 minutes',
+        accessibility: false,
+        hot: true
     },
-
     {
         id: 3,
-        img: 'https://cdn.pixabay.com/photo/2016/03/27/19/43/samsung-1283938_1280.jpg',
-        name: 'Phone Standard',
-        price: 299,
-        description: '',
-        quantity: 1
-
+        img: 'assets/spaghetti.png',
+        category: 'Italian Kitchen',
+        name: 'Spaghetti',
+        price: 8.99,
+        description: 'Experience the authentic taste of Italy with our exquisite spaghetti dishes',
+        quantity: 1,
+        calories: 600,
+        weight: '300 grams',
+        size: 'Regular',
+        preparationTime: '15 minutes',
+        accessibility: true,
+        hot: false
     },
-
     {
         id: 4,
-        img: 'https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_1280.jpg',
-        name: 'Phone Standard',
-        price: 299,
-        description: '',
-        quantity: 1
-
+        img: 'assets/salad.png',
+        category: 'First Dishes',
+        name: 'Salad',
+        price: 5.99,
+        description: 'Delight your taste buds with our fresh and vibrant salad creations',
+        quantity: 1,
+        calories: 200,
+        weight: '150 grams',
+        size: 'Side',
+        preparationTime: '5 minutes',
+        accessibility: true,
+        hot: false
     },
     {
         id: 5,
-        img: 'https://cdn.pixabay.com/photo/2018/01/28/21/14/lens-3114729_1280.jpg',
-        name: 'Camera "Zorkiy"',
-        price: 578,
-        description: 'Best Camera from "Zorkiy"',
-        quantity: 1
-
+        img: 'assets/soup.png',
+        category: 'Soups',
+        name: 'Soup',
+        price: 4.99,
+        description: 'Warm up your soul with our comforting and flavorful soup selections',
+        quantity: 1,
+        calories: 300,
+        weight: '250 grams',
+        size: 'Regular bowl',
+        preparationTime: '10 minutes',
+        accessibility: true,
+        hot: true
     },
     {
         id: 6,
-        img: 'https://cdn.pixabay.com/photo/2014/11/22/00/51/camera-541213_1280.jpg',
-        name: 'Camera "Olympus"',
-        price: 764,
-        description: 'Its a very "Olympus"',
-        quantity: 1
+        img: 'assets/sushi.png',
+        category: 'Japan Food',
+        name: 'Sushi',
+        price: 9.99,
+        description: 'Embark on a culinary journey with our exquisite and artfully crafted sushi',
+        quantity: 1,
+        calories: 400,
+        weight: '180 grams',
+        size: 'Nigiri/Sashimi or Roll',
+        preparationTime: '30 minutes',
+        accessibility: true,
+        hot: true
+    },
+    {
+        id: 7,
+        img: 'assets/cola.png',
+        category: 'Drinks',
+        name: 'Drink',
+        price: 2.99,
+        description: 'Quench your thirst with our refreshing and diverse selection of drinks',
+        quantity: 1,
+        calories: 150,
+        weight: '300 ml',
+        size: 'Regular',
+        preparationTime: '5 minutes',
+        accessibility: true,
+        hot: false
+    },
+    {
+        id: 8,
+        img: 'assets/icecream.png',
+        category: 'Sweets',
+        name: 'Ice Cream',
+        price: 3.99,
+        description: 'Indulge in creamy bliss with our irresistible artisanal ice cream flavors',
+        quantity: 1,
+        calories: 250,
+        weight: '100 grams',
+        size: 'Single scoop',
+        preparationTime: 'Served immediately',
+        accessibility: true,
+        hot: true
 
+    },
+    {
+        id: 9,
+        img: 'assets/cake.png',
+        category: 'Sweets',
+        name: 'Cake',
+        price: 19.99,
+        description: 'Delight in heavenly layers of sweetness with our delectable cake creations',
+        quantity: 1,
+        calories: 400,
+        weight: '150 grams',
+        size: 'Slice',
+        preparationTime: 'Ready to serve',
+        accessibility: true,
+        hot: false
     }
-    
-
 ];

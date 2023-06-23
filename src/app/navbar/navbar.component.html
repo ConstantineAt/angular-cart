@@ -5,9 +5,9 @@
     <button routerLink="/cart" class="btn btn-outline-light my-2 my-sm-0" type="submit">Go to Cart</button>
 </nav> -->
 
-<nav class="navbar sticky-top navbar-expand-lg bg-dark">
+<nav class="navbar sticky-top navbar-expand-md navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/">My Store</a>
+        <a class="navbar-brand" routerLink="/">Ristorante Il Gambero Rosso</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,14 +16,16 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-                <a class="nav-link" routerLink="/">About</a>
+                <a class="nav-link" routerLink="/products">Our Menu</a>
+                <a class="nav-link" routerLink="/form-table">Book a Table</a>
+                <a class="nav-link" routerLink="/form-event">Book an Event</a>
                 <!-- <a class="nav-link" routerLink="/">Pricing</a> -->
             </div>
 
         </div>
         <div class="rightDiv">
-            <button routerLink="/cart" class="btn btn-outline-light my-2 my-sm-0" type="submit">Go to Cart</button>
-            <p class="total" style="color: azure;">Total in cart: {{ length }}</p>
+            <button routerLink="/cart" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Go to Cart</button>
+            <p class="total" style="color: rgb(18, 29, 29);">Total in cart: {{ length }}</p>
         </div>
         
     </div>

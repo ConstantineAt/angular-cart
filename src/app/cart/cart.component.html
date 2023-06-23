@@ -1,7 +1,8 @@
-<h2>Your Cart</h2>
+<!-- <h2>Your Cart</h2>
 <h4>Total price: {{ total }} $</h4>
-<h6>Total in Cart: {{ length }}</h6>
-<div class="container">
+<h6>Total in Cart: {{ length }}</h6> -->
+
+<!-- <div class="container">
     <div class="grid">
         <div *ngFor="let item of cart; index as i">
             <div class="card" style="width: 18rem;">
@@ -9,12 +10,100 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ item.name }}</h5>
                     <p class="card-text">{{ item.price }}$</p>
-                    <p><button class="btn btn-warning minplus" (click)="removeQuantity(i)"> - </button> <span class="quantity">{{ item.quantity }}</span> <button class="minplus btn btn-warning" (click)="addQuantity(item.id)"> + </button></p>
+                    <p><button class="btn btn-warning minplus" (click)="removeQuantity(i)"> - </button> <span
+                            class="quantity">{{ item.quantity }}</span> <button class="minplus btn btn-warning"
+                            (click)="addQuantity(item.id)"> + </button></p>
                     <button class="btn btn-danger" (click)="removeFromCart(i)">delete</button>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
+
+
+
+<div class="wrap cf">
+    <!-- <h1 class="projTitle">Responsive Table<span>-Less</span> Shopping Cart</h1> -->
+    <div class="heading cf">
+        <h1>Cart</h1>
+        <a routerLink="/products" class="continue">Continue Shopping</a>
+    </div>
+    <div class="cart">
+        <!--    <ul class="tableHead">
+        <li class="prodHeader">Product</li>
+        <li>Quantity</li>
+        <li>Total</li>
+         <li>Remove</li>
+      </ul>-->
+
+
+        <ul class="cartWrap">
+            <div *ngFor="let item of cart; index as i">
+                <li class="items odd">
+
+                    <div class="infoWrap">
+                        <div class="cartSection">
+                            <img src="{{ item.img }}" alt="" class="itemImg" />
+                            <p class="itemNumber">#QUE-007544-002</p>
+                            <h3>{{ item.name }}</h3>
+
+                            <p><button class="minplus" (click)="removeQuantity(i)"> - </button> <span
+                                    class="quantity">{{ item.quantity }}</span> <button class="minplus"
+                                    (click)="addQuantity(item.id)"> + </button></p>
+
+                            <p class="stockStatus"> In Stock</p>
+                        </div>
+
+
+                        <div class="prodTotal cartSection">
+                            <p>${{ item.price }}</p>
+                        </div>
+                        <div class="cartSection removeWrap">
+                            <a (click)="removeFromCart(i)" class="remove">x</a>
+                        </div>
+                    </div>
+                </li>
+            </div>
+
+
+
+
+
+
+
+            <!--<li class="items even">Item 2</li>-->
+
+        </ul>
+    </div>
+
+    <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo"
+            placholder="Enter Code" />
+        <a routerLink="/" class="btn"></a>
+    </div>
+
+    <div class="subtotal cf">
+        
+            <p class="totalRow"><span class="label">Subtotal</span><span class="value">${{ subTotal | number: '1.2-2'
+                    }}</span></p>
+
+            <!-- <p class="totalRow"><span class="label">Discount</span><span class="value">$2.50</span></p> -->
+
+            <p class="totalRow"><span class="label">Tax</span><span class="value">${{ tax | number: '1.2-2' }}</span>
+            </p>
+            <p class="totalRow final"><span class="label">Total</span><span class="value">${{ total | number: '1.2-2'
+                    }}</span></p>
+
+            <!-- Add the *ngIf condition here -->
+            <div *ngIf="total >= 40">
+                <p class="totalRow"><span class="label" style="color: crimson;">Discount 15%</span><span
+                    class="value" style="color: crimson;"></span></p>
+            <p class="totalRow"><span class="label">Total with 15% Discount</span><span class="value" style="font-size: 25px; font-weight: 700;">${{ totalDiscount | number: '1.2-2'
+                    }}</span></p>
+            </div>
+            
+
+            <p class="totalRow"><a routerLink="/" class="btn continue">Checkout</a></p>
+
+        
+    </div>
 </div>
-
-

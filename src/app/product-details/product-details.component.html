@@ -1,13 +1,83 @@
-<h2>Product details</h2>
-<div *ngIf="product">
-    <img class="img" src="{{product.img}}" alt="IMG">
-    <p>{{ product.name }}</p>
-    <p>{{ product.price }}$</p>
-    <p>{{ product.description }}</p>
+<!-- <div class="title">
+    <h2>Product details</h2>
 </div>
 
+<div *ngIf="product">
+    <div class="title">
+        <img class="img" src="{{product.img}}" alt="IMG">
+        
+    </div>
+    <div class="content">
+        <p>{{ product.name }}</p>
+        <p>{{ product.price }}$</p>
+        <p>{{ product.description }}</p> 
+    </div>
+    <button (click)="addToCart()" class="btn myBtn btn-dark">Add to Cart</button>
+</div> -->
 
-<button (click)="addToCart()" class="btn btn-dark">Add to Cart</button>
+
+
+<!-- <div class="product-card">
+    <div class="product-image">
+      <img class="hidden-xs" src="{{product.img}}">
+       <img class="hidden-lg hidden-md hidden-sm" width="250px" src="https://s14.postimg.cc/oj9c50fk1/T_Shirt_Mock_Up_Front.png">
+    </div>
+    <div class="product-details">
+      <h1>{{ product.name }}</h1>
+      <p style="font-weight: bold;">${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <button (click)="addToCart()">ADD TO CART</button>
+    </div>
+  </div> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="container">	
+	
+	<div class="product-details">
+		
+	<h1>{{ product.name }}</h1>
+	<span class="hint-star star">
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<i class="fa fa-star-o" aria-hidden="true"></i>
+	</span>
+		
+			<p class="information">{{ product.description }}</p>
+
+		
+		
+<div class="control">
+	
+	<button class="btn">
+	 <span class="price">${{ product.price }}</span>
+   <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+   <span (click)="addToCart()" class="buy" style="padding-left: 100px;">Add to Cart</span>
+ </button>
+	
+</div>
+			
+</div>
+	
+<div class="product-image">
+	
+	<img src="{{ product.img }}" alt="">
+	
+
+<div class="info">
+	<h2> Description</h2>
+	<ul>
+		<li><strong>Calories : </strong>{{ product.calories }}</li>
+		<li><strong>Weight : </strong>{{ product.weight }}</li>
+		<li><strong>Size: </strong>{{ product.size }}</li>
+		<li><strong>PreparationTime: </strong>{{ product.preparationTime }}</li>
+		
+	</ul>
+</div>
+</div>
+
+</div>
 
 
 

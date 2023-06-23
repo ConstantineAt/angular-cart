@@ -1,19 +1,48 @@
-<h2>Products List</h2>
-
+<!-- <div class="title">
+    <h2>Our Menu</h2>
+</div> -->
 <div class="container">
     <div class="grid">
         <div *ngFor="let product of products; index as i">
-            <div class="card" style="width: 18rem;">
-                <img [src]="product.img" class="card-img-top" alt="IMG">
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
-                    <div class="btns">
-                        <a routerLink="/product/{{ i }}" class="btn btn-primary">See the Details</a>
-                        <button (click)="addToCart(product)" class="btn btn-dark">Add to Cart</button> 
+            <div class="product-card">
+                <div *ngIf="product.hot" class="badge">Hot</div>
+                <div class="product-tumb">
+                    <img src="{{product.img}}" alt="">
+                </div>
+                <div class="product-details">
+                    <span class="product-catagory">{{ product.category }}</span>
+                    <h4><a routerLink="/product/{{ i }}">{{ product.name }}</a></h4>
+                    <p>{{ product.description }}</p>
+                    <div class="product-bottom-details">
+                        <div class="product-price"><small>${{product.price}}</small>${{product.price}}</div>
+                        <div class="product-links">
+                            <ng-container *ngIf="product.accessibility; else notAccessible">
+                                <h6><a routerLink="/product/{{ i }}" class="">See the Details</a></h6>
+                                <h6 class="h6"><a (click)="addToCart(product)" class="">Add to Cart</a></h6>
+                            </ng-container>
+                            <ng-template #notAccessible>
+                                <p style="font-size: 12px; color: rgb(221, 196, 56);">This product is not accessible.
+                                </p>
+                            </ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<!-- <div class="card" style="width: 18rem;">
+    <img [src]="product.img" class="card-img-top" alt="IMG">
+    <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
+        <div class="btns">
+            <a routerLink="/product/{{ i }}" class="btn btn-primary">See the Details</a>
+            <button (click)="addToCart(product)" class="btn btn-dark">Add to Cart</button>
+        </div>
+    </div>
+</div> -->

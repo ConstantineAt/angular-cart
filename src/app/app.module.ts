@@ -7,6 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormTableComponent } from './form-table/form-table.component';
+import { FormEventComponent } from './form-event/form-event.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { CartComponent } from './cart/cart.component';
     NavbarComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    HomeComponent,
+    FooterComponent,
+    FormTableComponent,
+    FormEventComponent
   ],
   imports: [
     BrowserModule,
